@@ -16,3 +16,9 @@ title: Gabe Finch
   <img src= <%= lorem.image('300X400') %> >
 
 </div>
+
+<% (1..18).each do |num| %>
+    <div class="number<%= num %>">
+      <%= num %>
+    </div>
+<% end %>
