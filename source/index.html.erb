@@ -3,7 +3,7 @@ title: Gabe Finch
 ---
 
 <div class="welcome">
-  <h1>Gabriel S. Finch</h1>
+  <h1>Gabe Finch</h1>
   <p class="doc">
     <%= link_to 'twitter', "https://twitter.com/grapefinch" %>
     <%= link_to 'codepen', 'http://codepen.io/gabefinch/' %>
@@ -12,13 +12,11 @@ title: Gabe Finch
     <%= link_to 'github', 'https://github.com/gabefinch' %>
 
   </p>
-
-  <img src= <%= lorem.image('300X400') %> >
+  <% (1..18).each do |num| %>
+      <div class=" circle number<%= num %>"></div>
+  <% end %>
 
 </div>
 
-<% (1..18).each do |num| %>
-    <div class="number<%= num %>">
-      <%= num %>
-    </div>
-<% end %>
+
+  <img src= <%= lorem.image('300X400') %> >
