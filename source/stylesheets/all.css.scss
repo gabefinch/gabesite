@@ -17,15 +17,15 @@ h1 {
   margin: 0; }
 
 .doc {
-  font-size: 14px;
+  font-size: 24px;
   margin: 0; }
   .doc:before,
   .doc:after {
-    opacity: .2;
+    opacity: .9;
     padding: 6px;
     font-style: normal;
     position: relative;
-    content: " * * "; }
+    content: "-"; }
   .doc a {
     color: rgba(0, 0, 0, 0.3); }
     .doc a:hover {
@@ -36,7 +36,7 @@ h1 {
   -webkit-animation-duration: .9s; }
 
 @-webkit-keyframes welcome {
-  from {
+  0% {
     -webkit-transform: scale(0);
     opacity: 0;
   }
@@ -44,23 +44,34 @@ h1 {
    -webkit-transform: scale(0);
    opacity: 0;
   }
-  82.5% {
+  80% {
     -webkit-transform: scale(1.2);
     -webkit-animation-timing-function: ease-out;
     opacity: 1;
   }
-  to {
+  95% {
+    -webkit-transform: scale(0.9);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  100% {
     -webkit-transform: scale(1);
   }
 }
 
 @import "compass/css3";
 
-body {
-  background-color: gray;
+
+.circle {
+  width: 150px;
+  height: 150px;
+  left: 300px;
+  top: 150px;
+  border-radius: 50%;
 }
-.circle {width: 150px;height: 150px;left: 300px;top: 150px;border-radius: 50%;}
+
 $position: absolute;
+
 @for $i from 1 through 18 {
   div.number#{$i} {
     position: $position;
