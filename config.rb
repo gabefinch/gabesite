@@ -47,9 +47,9 @@ end
 #   end
 # end
 
-set :css_dir, 'home/stylesheets'
+set :css_dir, 'stylesheets'
 
-set :js_dir, 'home/javascripts'
+set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
@@ -65,9 +65,9 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  Use relative URLs
+  # Use relative URLs
   activate :relative_assets
-  set :relative_links, true
+  # set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
