@@ -47,9 +47,9 @@ end
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, '/home/stylesheets'
 
-set :js_dir, 'javascripts'
+set :js_dir, '/home/javascripts'
 
 set :images_dir, 'images'
 
@@ -57,17 +57,17 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
-  # set :relative_links, true
+  set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
