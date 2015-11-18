@@ -1,10 +1,11 @@
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700);
 
 body {
   background: #d4d4d4;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 h1 {
@@ -21,18 +22,37 @@ h1 {
 .doc {
   font-size: 24px;
   margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .5;
-    padding: 6px;
-    font-size: 32px;
-    font-style: normal;
-    position: relative;
-    content: "⨗"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
+  // .doc:before,
+  // .doc:after {
+  //   opacity: .5;
+  //   padding: 6px;
+  //   font-size: 32px;
+  //   font-style: normal;
+  //   position: relative;
+  //   content: "⨗"; }
+.doc a {
+  color: rgba(0, 0, 0, 0.3);
+}
+.doc a:hover {
+  color: #666; }
+.doc{
+  p {
+    margin: 3px 50px 3px 50px;
+  }
+}
+.samples{
+  text-align: justify;
+  font-size: 20px;
+  margin: 10px 50px 10px 50px;
+  p {
+    margin: 3px 50px 3px 50px;
+  }
+  a {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  a:hover {
+    color: #666; }
+}
 
 .welcome {
   -webkit-animation-name: welcome;
@@ -63,9 +83,29 @@ h1 {
 }
 
 @import "compass/css3";
-img{
-  width: 50%;
+img {
+  width: 30%;
 }
+img:hover {
+  -webkit-animation-name: bulge;
+  -webkit-animation-duration: .9s;
+}
+
+@-webkit-keyframes bulge {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-rotate: 0 deg;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    -webkit-rotate: 15 deg;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -webkit-rotate: 0 deg;
+  }
+}
+
 
 .circle {
   width: 20vw;
@@ -76,19 +116,19 @@ img{
 
 $position: absolute;
 
-@for $i from 1 through 18 {
+@for $i from 1 through 5 {
   div.number#{$i} {
     position: $position;
     left: 41%;
-    transform: scale($i/5);
-    opacity: $i/18;
+    transform: scale($i/4);
+    opacity: $i/8;
     z-index: -$i;
     animation: spinner + $i ($i/30 + 2 + s) linear 0s infinite;
   }
   @keyframes spinner#{$i} {
   0% {
     background-color: hsl(0,90%,60%);
-    top: 150 - $i * 7 + px;
+    top: 150 - $i * 15 + px;
   }
   25% {
     background-color: hsl(90,90%,60%);
@@ -96,7 +136,7 @@ $position: absolute;
   }
   50% {
     background-color: hsl(180,90%,60%);
-    top: 150 + $i * 7 + px;;
+    top: 150 + $i * 15 + px;;
   }
   75% {
     background-color: hsl(270,90%,60%);
@@ -104,7 +144,7 @@ $position: absolute;
   }
   100% {
     background-color: hsl(0deg,90%,60%);
-    top: 150 - $i * 7 + px;
+    top: 150 - $i * 15 + px;
   }
 }
 }

@@ -4,26 +4,109 @@ title: Gabe Finch
 
 <div class="welcome">
   <h1>Gabe Finch</h1>
-  <p class="doc">
-    <%= link_to 'twitter', "https://twitter.com/grapefinch" %>
-  </p>
-  <p class="doc">
-    <%= link_to 'codepen', 'http://codepen.io/gabefinch/' %>
-  </p>
-  <p class="doc">
-    <%= link_to 'linkedin', 'http://linkedin.com/in/gabefinch' %>
-  </p>
-  <p class="doc">
-    <%= link_to 'resume', 'http://gabefinch.github.io/resume' %>
-  </p>
-  <p class="doc">
-    <%= link_to 'github', 'https://github.com/gabefinch' %>
-  </p>
-  <p class="doc">
-    <%= link_to 'instagram', 'https://instagram.com/elifigbranch/' %>
-  </p>
+  <div class="doc">
+    <p>
+      = { resumeLink:
+      <%= link_to '/resume/', 'http://gabefinch.github.io/resume' %>
+      ,
+    </p>
+    <p>
+      email:
+      <%= link_to 'gabefinch@gmail.com', 'mailto:gabefinch@gmail.com' %>
+      ,
+    </p>
+    <p>
+      location: { city: "Portland", state: "Oregon"},
+    </p>
+    <p>
+      githubProfile:
+      <%= link_to 'github.com/gabefinch/', 'https://github.com/gabefinch' %>
+      ,
+    </p>
+    <p>
+      linkedIn:
+      <%= link_to 'linkedin.com/in/gabefinch/', 'http://linkedin.com/in/gabefinch' %>
+      ,
+    </p>
 
-  <% (1..18).each do |num| %>
+    <p>
+      sampleProjects: [
+    </p>
+  </div>
+  <div class="samples">
+    <p>
+      { name: "Answer Me" ,
+      description: "Rails application ultrabasic clone of Stack Overflow (users, questions, answers, best answer, votes)",
+    </p>
+    <p>
+      link:
+      <%= link_to '/answer-me/', 'http://vast-shore-5799.herokuapp.com/' %>
+      },
+    </p>
+
+    <p>
+      { name: "Flash Cards" , description: "Angular card practice app which uses a simple card sorting algorithm.",
+    </p>
+    <p>
+      link:
+      <%= link_to '/flash-cards/', 'http://gabefinch.github.io/flash-cards' %>
+      },
+    </p>
+    <p>
+      { name: "Forty Forty 100" , description: "Hack Oregon project presenting data about graduation rates. Helped integrate data visualizations and build the front-end",
+    </p>
+    <p>
+      link:
+      <%= link_to 'fortyforty100.hackoregon.org/', 'http://fortyforty100.hackoregon.org/' %>
+      },
+    </p>
+    <p>
+      { name: "Humble Pie" , description: "Put together a pizza order, built for code school with JQuery and Bootstrap",
+    </p>
+    <p>
+      link:
+      <%= link_to '/humble-pie-pizza/', 'http://gabefinch.github.io/humble-pie-pizza' %>
+      },
+    </p>
+    <p>
+      { name: "Triangle Tracker" , description: "Sorts and draws triangles using canvas elements and the Law of Cosines",
+    </p>
+    <p>
+      link:
+      <%= link_to '/triangle_tracker/', 'http://gabefinch.github.io/triangle_tracker/' %>
+      },
+    </p>
+    <p>
+      { name: "Maze" , description: "Maze navigation game built for Web 1.0 Conf",
+    </p>
+    <p>
+      link:
+      <%= link_to 'gabefinch.neocities.org', 'http://gabefinch.neocities.org' %>
+      }
+    </p>
+  </div>
+  <div class="doc">
+    <p>
+      ],
+    </p>
+    <p>
+      codePen:
+      <%= link_to 'codepen.io/gabefinch', 'http://codepen.io/gabefinch/' %>
+      ,
+    </p>
+    <p>
+      tweetage:
+      <%= link_to 'twitter.com/grapefinch', "https://twitter.com/grapefinch" %>
+      ,
+    </p>
+    <p>
+      pictures:
+      <%= link_to 'instagram.com/grapefinch', 'https://instagram.com/grapefinch/' %>
+      }
+    </p>
+  </div>
+
+  <% (1..5).each do |num| %>
       <div class=" circle number<%= num %>"></div>
   <% end %>
 
